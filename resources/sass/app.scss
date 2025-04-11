@@ -1,0 +1,380 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+/* custom checkbox */
+.my-form {
+    --_clr-primary: #666;
+    --_clr-hover: #f33195;
+    --_clr-checked: #127acf;
+}
+
+.my-form>div {
+    --_clr-current: var(--_clr-primary);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.my-form>div+div {
+    margin-block-start: 0.5rem;
+}
+
+.my-form label {
+    cursor: pointer;
+    color: var(--_clr-current);
+    transition: color 150ms ease-in-out;
+}
+
+/* styled checkbox */
+.my-form input[type="checkbox"] {
+    appearance: none;
+    outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    aspect-ratio: 1;
+    padding: 0.25rem;
+    background: transparent;
+    border: 1px solid var(--_clr-current);
+    border-radius: 2px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.my-form input[type="checkbox"]::after {
+    content: "\2714";
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    color: var(--_clr-checked);
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.my-form label:hover,
+.my-form input[type="checkbox"]:focus-visible,
+.my-form input[type="checkbox"]:focus-visible+label,
+.my-form input[type="checkbox"]:hover,
+.my-form input[type="checkbox"]:hover+label {
+    --_clr-current: var(--_clr-hover);
+}
+
+.my-form input[type="checkbox"]:focus-visible::after,
+.my-form input[type="checkbox"]:hover::after {
+    opacity: 0.5;
+    color: var(--_clr-hover);
+}
+
+.my-form input[type="checkbox"]:checked+label:not(:hover),
+.my-form input[type="checkbox"]:checked:not(:hover) {
+    --_clr-current: var(--_clr-checked);
+}
+
+.my-form input[type="checkbox"]:checked::after {
+    opacity: 1;
+}
+
+.inner {
+    width: 80vw;
+}
+
+/* Style for index-messages */
+div.index-messages {
+
+
+    .alert {
+        border-radius: 10px;
+        background-color: #e9f5ff;
+        border-color: #b3d9ff;
+        color: #0373e2;
+    }
+
+    .alert h4 {
+        margin-bottom: 10px;
+    }
+
+    .list-group-item {
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        background-color: #f0f4f8;
+        margin-bottom: 10px;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .list-group-item:hover {
+        background-color: #e9f1f7;
+        transform: translateY(-3px);
+    }
+
+    .list-group-item h5 {
+        font-weight: 600;
+        color: #0373e2;
+    }
+
+    .list-group-item p {
+        color: #495057;
+    }
+
+    .list-group-item small {
+        color: #636262;
+    }
+
+    .list-group-item .text-muted {
+        color: #1fa140 !important;
+    }
+
+    .btn-secondary {
+        background-color: #0373e2;
+        border-color: #0373e2;
+        color: white;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #005bb5;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary:focus,
+    .btn-secondary:active {
+        box-shadow: 0 0 8px rgba(3, 115, 226, 0.4);
+    }
+
+    /* Pagination styling */
+    div.d-flex.justify-content-center {
+        margin-top: 20px;
+    }
+
+    div.d-flex.justify-content-center .page-item .page-link {
+        background-color: #007bff;
+        color: white;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+    }
+
+    div.d-flex.justify-content-center .page-item .page-link:hover {
+        background-color: #0056b3;
+    }
+}
+
+/* Style for show-message */
+div.show-message {
+    .card {
+        border-radius: 10px;
+        background-color: #f0f4f8;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin-bottom: 20px;
+    }
+
+    .card:hover {
+        background-color: #e9f1f7;
+        transform: translateY(-5px);
+    }
+
+    .card-header {
+        background-color: #0373e2;
+        color: white;
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-title {
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    .card-subtitle {
+        color: #d9e8f7;
+        font-size: 0.9rem;
+    }
+
+    .card-body {
+        padding: 20px;
+        color: #495057;
+        line-height: 1.6;
+    }
+
+    .card-body .card-text {
+        margin-bottom: 15px;
+    }
+
+    .card-body .card-text small {
+        font-size: 0.85rem;
+        color: #1fa140;
+    }
+
+    .card-footer {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-top: 1px solid #dee2e6;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .btn-secondary {
+        background-color: #0373e2;
+        border-color: #0373e2;
+        color: white;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #005bb5;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary:focus,
+    .btn-secondary:active {
+        box-shadow: 0 0 8px rgba(3, 115, 226, 0.4);
+    }
+
+    .btn-secondary .bi-arrow-left {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .card-body .card-text {
+        font-size: 1rem;
+        color: #495057;
+        word-wrap: break-word;
+    }
+
+    .card-body .bi {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #0373e2;
+        transition: color 0.3s ease;
+    }
+
+
+    .card-body .bi:hover {
+        color: #005bb5;
+    }
+
+    .card-body .bi-telephone {
+        color: #1fa140;
+    }
+
+    .card-body .bi-calendar {
+        color: #007bff;
+    }
+}
+
+/* Style for reviews Index */
+div.index-reviews {
+    .list-group-item {
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        background-color: #f0f4f8;
+        margin-bottom: 10px;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .list-group-item:hover {
+        background-color: #e9f1f7;
+        transform: translateY(-3px);
+    }
+
+    .list-group-item h5 {
+        font-weight: 600;
+        color: #0373e2;
+    }
+
+    .list-group-item p {
+        color: #495057;
+    }
+
+    .list-group-item small {
+        color: #636262;
+    }
+
+    div.d-flex.justify-content-center {
+        margin-top: 20px;
+    }
+
+    div.d-flex.justify-content-center .page-item .page-link {
+        background-color: #007bff;
+        color: white;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+    }
+
+    div.d-flex.justify-content-center .page-item .page-link:hover {
+        background-color: #0056b3;
+    }
+}
+
+
+/* Style for show-Review */
+div.show-review {
+    .card {
+        border-radius: 10px;
+        background-color: #f0f4f8;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background-color: #0373e2;
+        color: white;
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        padding: 20px;
+        color: #495057;
+        line-height: 1.6;
+    }
+
+    .card-body .card-text {
+        font-size: 1rem;
+    }
+
+    .card-footer {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-top: 1px solid #dee2e6;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .btn-secondary {
+        background-color: #0373e2;
+        border-color: #0373e2;
+        color: white;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #005bb5;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary:focus,
+    .btn-secondary:active {
+        box-shadow: 0 0 8px rgba(3, 115, 226, 0.4);
+    }
+}
