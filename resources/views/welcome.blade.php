@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to BTeachers</title>
+    <title>Welcome to Nebrorent</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,7 +17,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="/">BTeachers</a>
+        <a class="navbar-brand" href="/">NebroRent</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,7 +50,7 @@
     <!-- Hero Section -->
     <section class="bg-primary text-white text-center py-5">
         <div class="container">
-            <h1 class="display-6 fw-bold">Welcome to BTeachers</h1>
+            <h1 class="display-6 fw-bold">Welcome to NebroRent</h1>
             <p class="lead">Join a growing community of teachers. Register now to create your profile, receive reviews, and manage your classes!</p>
             @if (Route::has('login'))
                     @auth
@@ -76,7 +76,7 @@
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-2">
     <div class="container">
-        <p class="mb-1">&copy; 2024 BTeachers. All rights reserved.</p>
+        <p class="mb-1">&copy; 2025 NebroRent. All rights reserved.</p>
         <p class="mb-0 small">Have questions? <a href="#" class="text-warning text-decoration-none">Contact us</a></p>
     </div>
 </footer>

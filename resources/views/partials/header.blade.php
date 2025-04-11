@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Logo and Brand Name with a background color -->
         <a class="navbar-brand fw-bold text-white px-3 rounded" href="/" style="background-color: #007bff;">
-            BTeachers
+            NebroRent
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
